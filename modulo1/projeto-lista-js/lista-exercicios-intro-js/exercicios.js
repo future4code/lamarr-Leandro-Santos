@@ -80,7 +80,17 @@ function calculaIngressosEspetaculo(custo, valorIngresso) {
 // EXERCÍCIO 08
 function checaStringsMesmoTamanho(string1, string2) {
   // implemente sua lógica aqui
-// **** falta responder  essa *** falta responder  essa  ***
+  const tamanho = (string1.length, string2.length)
+
+  return Boolean(tamanho)
+  // emmmmm offffffffffff
+  // emmmmm offffffffffff
+  // emmmmm offffffffffff
+  // emmmmm offffffffffff
+  // emmmmm offffffffffff
+  // emmmmm offffffffffff
+  // emmmmm offffffffffff
+
 }
 
 // EXERCÍCIO 09
@@ -94,15 +104,15 @@ return array [0]
 function retornaUltimoElemento(array) {
   // implemente sua lógica aqui
 
-// **** falta responder  essa *** falta responder  essa  ***
-  
+return array.pop()
+ 
 }
-
 
 // EXERCÍCIO 11
 function trocaPrimeiroEUltimo(array) {
   // implemente sua lógica aqui
-
+  
+  return trocaPrimeiroEUltimo
 }
 
 // EXERCÍCIO 12
