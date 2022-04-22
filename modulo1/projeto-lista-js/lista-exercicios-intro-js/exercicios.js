@@ -80,16 +80,7 @@ function calculaIngressosEspetaculo(custo, valorIngresso) {
 // EXERCÍCIO 08
 function checaStringsMesmoTamanho(string1, string2) {
   // implemente sua lógica aqui
-  const tamanho = (string1.length, string2.length)
-
-  return Boolean(tamanho)
-  // emmmmm offffffffffff
-  // emmmmm offffffffffff
-  // emmmmm offffffffffff
-  // emmmmm offffffffffff
-  // emmmmm offffffffffff
-  // emmmmm offffffffffff
-  // emmmmm offffffffffff
+  return string1.length === string2.length
 
 }
 
@@ -111,30 +102,61 @@ return array.pop()
 // EXERCÍCIO 11
 function trocaPrimeiroEUltimo(array) {
   // implemente sua lógica aqui
-  
-  return trocaPrimeiroEUltimo
+  let primeiroArray = array[0]
+  array[0] = array[array.length -1]
+
+  array[array.length -1] = primeiroArray
+
+  let primeiro = array[0];
+
+  let ultimo = array[array.length - 1];
+
+  return array
+  // return (array.slice(-1)[0])
+
 }
 
 // EXERCÍCIO 12
 function checaIgualdadeDesconsiderandoCase(string1, string2) {
   // implemente sua lógica aqui
+ 
+  return string1.toUpperCase() === string2.toUpperCase()
 
 }
 
 // EXERCÍCIO 13
 function checaRenovacaoRG() {
   // implemente sua lógica aqui
+  let anoAtual = Number(prompt("Digite o ano em que estamos."))
+  let anoNascimento = Number(prompt("Digite seu ano de nascimento."))
+  let anoCNH = Number(prompt("Digite o ano de emissão de sua CNH."))
 
+  let idade = anoNascimento - anoAtual
+  let renovacao1 = idade <= (anoCNH-5) ===true
 }
 
 // EXERCÍCIO 14
+
 function checaAnoBissexto(ano) {
   // implemente sua lógica aqui
-
+   let bissexto = (ano % 4 == 0) && ( (ano % 100 != 0) || (ano % 400 == 0) );
+   return bissexto
 }
 
 // EXERCÍCIO 15
 function checaValidadeInscricaoLabenu() {
   // implemente sua lógica aqui
+  
+  let pergunta1 = prompt("Você tem mais de 18 anos? - Sim ou Não")
+  let pergunta2 = prompt("Você possui ensino médio completo? - Sim ou Não")
+  let pergunta3 = prompt("Você possui disponibilidade exclusiva durante os horários do curso? - Sim ou Não")
+
+ 
+  // console.log(Boolean(pergunta1 === "sim", pergunta2 === "sim", pergunta3 === "sim" === true))  
+   // console.log(pergunta1, pergunta2, pergunta3)  
+  console.log(Boolean(pergunta1 === "sim", pergunta2 === "sim", pergunta3 === "sim")) 
+  
+
+
 
 }
