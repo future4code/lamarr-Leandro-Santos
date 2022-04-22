@@ -112,8 +112,7 @@ function trocaPrimeiroEUltimo(array) {
   let ultimo = array[array.length - 1];
 
   return array
-  // return (array.slice(-1)[0])
-
+  
 }
 
 // EXERCÍCIO 12
@@ -129,11 +128,24 @@ function checaRenovacaoRG() {
   // implemente sua lógica aqui
   let anoAtual = Number(prompt("Digite o ano em que estamos."))
   let anoNascimento = Number(prompt("Digite seu ano de nascimento."))
-  let anoCNH = Number(prompt("Digite o ano de emissão de sua CNH."))
+  let anoRG = Number(prompt("Digite o ano de emissão de seu RG."))
 
-  let idade = anoNascimento - anoAtual
-  let renovacao1 = idade <= (anoCNH-5) ===true
+  let idade = (ano1, ano2) => ano1 - ano2
+  let renovacao = (ano1, ano3) => ano1 - ano3
+
+  function checar(valor1, valor2) {
+    let logica1 = ((valor1 <= 20) && (valor2 >= 5)) 
+    let logica2 = ((valor1 <= 50) && (valor2 >= 10)) 
+    let logica3 = ((valor1 > 50) && (valor2 >= 15)) 
+
+   checar = (logica1 || logica2 || logica3)
+
+    return checar
+
+  }
+  console.log(checar(idade(anoAtual,anoNascimento), renovacao(anoAtual, anoRG)))
 }
+
 
 // EXERCÍCIO 14
 
@@ -151,12 +163,5 @@ function checaValidadeInscricaoLabenu() {
   let pergunta2 = prompt("Você possui ensino médio completo? - Sim ou Não")
   let pergunta3 = prompt("Você possui disponibilidade exclusiva durante os horários do curso? - Sim ou Não")
 
- 
-  // console.log(Boolean(pergunta1 === "sim", pergunta2 === "sim", pergunta3 === "sim" === true))  
-   // console.log(pergunta1, pergunta2, pergunta3)  
-  console.log(Boolean(pergunta1 === "sim", pergunta2 === "sim", pergunta3 === "sim")) 
-  
-
-
-
+   console.log(pergunta1.trim() === "sim", pergunta2.trim() === "sim", pergunta3.trim() === "sim" === true) 
 }
