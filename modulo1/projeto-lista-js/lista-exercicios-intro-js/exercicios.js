@@ -384,6 +384,7 @@ function checaValidadeInscricaoLabenu() {
 
 <<<<<<< HEAD
    console.log(pergunta1.trim() === "sim", pergunta2.trim() === "sim", pergunta3.trim() === "sim" === true) 
+   //atualizando
 >>>>>>> 22fd7ebd6134022aa5721368e68b40a8d2b7492a
 }
 =======
