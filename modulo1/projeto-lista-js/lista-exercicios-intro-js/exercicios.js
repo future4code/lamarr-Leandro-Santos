@@ -1,167 +1,225 @@
 // EXEMPLOS DE IMPLEMENTAÇÃO ---------------------------------------------------------------
 
 // EXERCÍCIO 0A
-function soma(num1, num2) {
-  // implemente sua lógica aqui
-  return num1 + num2
-}
+// function soma(num1, num2) {
+//   // implemente sua lógica aqui
+//   return num1 + num2
+// }
 
-// EXERCÍCIO 0B
-function imprimeMensagem() {
-  // implemente sua lógica aqui
-  const mensagem = prompt('Digite uma mensagem!')
+// // EXERCÍCIO 0B
+// function imprimeMensagem() {
+//   // implemente sua lógica aqui
+//   const mensagem = prompt('Digite uma mensagem!')
 
-  console.log(mensagem)
-}
+//   console.log(mensagem)
+// }
 
-// EXERCÍCIOS PARA FAZER ------------------------------------------------------------------
+// // EXERCÍCIOS PARA FAZER ------------------------------------------------------------------
 
-// EXERCÍCIO 01
-function calculaAreaRetangulo() {
-  // implemente sua lógica aqui
-const altura = Number(prompt("Digite a altura"))
-const largura = Number(prompt("Digite a largura"))
+// // EXERCÍCIO 01
+// function calculaAreaRetangulo() {
+//   // implemente sua lógica aqui
+// <<<<<<< objetos
 
-console.log(altura * largura)
-}
+// =======
+// const altura = Number(prompt("Digite a altura"))
+// const largura = Number(prompt("Digite a largura"))
 
-// EXERCÍCIO 02
-function imprimeIdade() {
-  // implemente sua lógica aqui
-  const anoAtual = prompt("Digite o ano em que estamos.")
-  const anoNascimento = prompt("Digite o ano em que nasceu.")
+// console.log(altura * largura)
+// >>>>>>> master
+// }
 
-  console.log(anoAtual - anoNascimento)
-}
+// // EXERCÍCIO 02
+// function imprimeIdade() {
+//   // implemente sua lógica aqui
+// <<<<<<< objetos
 
-// EXERCÍCIO 03
-function calculaIMC(peso1, altura1) {
-  // implemente sua lógica aqui
-  const imc = (peso1 / (altura1 * altura1))
-  return imc
-}
+// }
 
-// EXERCÍCIO 04
-function imprimeInformacoesUsuario() {
-  // implemente sua lógica aqui
-  // "Meu nome é NOME, tenho IDADE anos, e o meu email é EMAIL."
-  const nome = prompt("Digite o seu nome.")
-  const idade = prompt("Digite a sua idade.")
-  const email = prompt("Digite o seu e-mail.")
+// // EXERCÍCIO 03
+// function calculaIMC(peso, altura) {
+//   // implemente sua lógica aqui
 
-  console.log(`Meu nome é ${nome}, tenho ${idade} anos, e o meu email é ${email}.`)
+// =======
+//   const anoAtual = prompt("Digite o ano em que estamos.")
+//   const anoNascimento = prompt("Digite o ano em que nasceu.")
 
-}
+//   console.log(anoAtual - anoNascimento)
+// }
 
-// EXERCÍCIO 05
-function imprimeTresCoresFavoritas() {
-  // implemente sua lógica aqui
-  const cor1 = prompt("Digite uma cor favorita.")
-  const cor2 = prompt("Digite outra cor favorita.")
-  const cor3 = prompt("Digite mais uma cor favorita.")
+// // EXERCÍCIO 03
+// function calculaIMC(peso1, altura1) {
+//   // implemente sua lógica aqui
+//   const imc = (peso1 / (altura1 * altura1))
+//   return imc
+// >>>>>>> master
+// }
 
-  console.log(Array(cor1, cor2, cor3))
-}
+// // EXERCÍCIO 04
+// function imprimeInformacoesUsuario() {
+//   // implemente sua lógica aqui
+//   // "Meu nome é NOME, tenho IDADE anos, e o meu email é EMAIL."
+// <<<<<<< objetos
+// =======
+//   const nome = prompt("Digite o seu nome.")
+//   const idade = prompt("Digite a sua idade.")
+//   const email = prompt("Digite o seu e-mail.")
 
-// EXERCÍCIO 06
-function retornaStringEmMaiuscula(string) {
-  // implemente sua lógica aqui
+//   console.log(`Meu nome é ${nome}, tenho ${idade} anos, e o meu email é ${email}.`)
+// >>>>>>> master
+
+// }
+
+// // EXERCÍCIO 05
+// function imprimeTresCoresFavoritas() {
+//   // implemente sua lógica aqui
+// <<<<<<< objetos
+
+// =======
+//   const cor1 = prompt("Digite uma cor favorita.")
+//   const cor2 = prompt("Digite outra cor favorita.")
+//   const cor3 = prompt("Digite mais uma cor favorita.")
+
+//   console.log(Array(cor1, cor2, cor3))
+// >>>>>>> master
+// }
+
+// // EXERCÍCIO 06
+// function retornaStringEmMaiuscula(string) {
+//   // implemente sua lógica aqui
+// <<<<<<< objetos
+
+// =======
   
-  return string.toUpperCase();
-}
+//   return string.toUpperCase();
+// >>>>>>> master
+// }
 
-// EXERCÍCIO 07
-function calculaIngressosEspetaculo(custo, valorIngresso) {
-  // implemente sua lógica aqui
+// // EXERCÍCIO 07
+// function calculaIngressosEspetaculo(custo, valorIngresso) {
+//   // implemente sua lógica aqui
 
-  return (custo / valorIngresso)
-}
+// <<<<<<< objetos
+// =======
+//   return (custo / valorIngresso)
+// >>>>>>> master
+// }
 
-// EXERCÍCIO 08
-function checaStringsMesmoTamanho(string1, string2) {
-  // implemente sua lógica aqui
-  return string1.length === string2.length
+// // EXERCÍCIO 08
+// function checaStringsMesmoTamanho(string1, string2) {
+//   // implemente sua lógica aqui
+// <<<<<<< objetos
+// =======
+//   return string1.length === string2.length
+// >>>>>>> master
 
-}
+// }
 
-// EXERCÍCIO 09
-function retornaPrimeiroElemento(array) {
-  // implemente sua lógica aqui
+// // EXERCÍCIO 09
+// function retornaPrimeiroElemento(array) {
+//   // implemente sua lógica aqui
 
-return array [0]
-}
+// <<<<<<< objetos
+// =======
+// return array [0]
+// >>>>>>> master
+// }
 
-// EXERCÍCIO 10
-function retornaUltimoElemento(array) {
-  // implemente sua lógica aqui
+// // EXERCÍCIO 10
+// function retornaUltimoElemento(array) {
+//   // implemente sua lógica aqui
 
-return array.pop()
+// <<<<<<< objetos
+// =======
+// return array.pop()
  
-}
+// >>>>>>> master
+// }
 
-// EXERCÍCIO 11
-function trocaPrimeiroEUltimo(array) {
-  // implemente sua lógica aqui
-  let primeiroArray = array[0]
-  array[0] = array[array.length -1]
+// // EXERCÍCIO 11
+// function trocaPrimeiroEUltimo(array) {
+//   // implemente sua lógica aqui
+// <<<<<<< objetos
 
-  array[array.length -1] = primeiroArray
+// =======
+//   let primeiroArray = array[0]
+//   array[0] = array[array.length -1]
 
-  let primeiro = array[0];
+//   array[array.length -1] = primeiroArray
 
-  let ultimo = array[array.length - 1];
+//   let primeiro = array[0];
 
-  return array
+//   let ultimo = array[array.length - 1];
+
+//   return array
   
-}
+// >>>>>>> master
+// }
 
-// EXERCÍCIO 12
-function checaIgualdadeDesconsiderandoCase(string1, string2) {
-  // implemente sua lógica aqui
+// // EXERCÍCIO 12
+// function checaIgualdadeDesconsiderandoCase(string1, string2) {
+//   // implemente sua lógica aqui
+// <<<<<<< objetos
+// =======
  
-  return string1.toUpperCase() === string2.toUpperCase()
+//   return string1.toUpperCase() === string2.toUpperCase()
+// >>>>>>> master
 
-}
+// }
 
-// EXERCÍCIO 13
-function checaRenovacaoRG() {
-  // implemente sua lógica aqui
-  let anoAtual = Number(prompt("Digite o ano em que estamos."))
-  let anoNascimento = Number(prompt("Digite seu ano de nascimento."))
-  let anoRG = Number(prompt("Digite o ano de emissão de seu RG."))
+// // EXERCÍCIO 13
+// function checaRenovacaoRG() {
+//   // implemente sua lógica aqui
+// <<<<<<< objetos
 
-  let idade = (ano1, ano2) => ano1 - ano2
-  let renovacao = (ano1, ano3) => ano1 - ano3
+// }
 
-  function checar(valor1, valor2) {
-    let logica1 = ((valor1 <= 20) && (valor2 >= 5)) 
-    let logica2 = ((valor1 <= 50) && (valor2 >= 10)) 
-    let logica3 = ((valor1 > 50) && (valor2 >= 15)) 
+// // EXERCÍCIO 14
+// function checaAnoBissexto(ano) {
+//   // implemente sua lógica aqui
 
-   checar = (logica1 || logica2 || logica3)
+// =======
+//   let anoAtual = Number(prompt("Digite o ano em que estamos."))
+//   let anoNascimento = Number(prompt("Digite seu ano de nascimento."))
+//   let anoRG = Number(prompt("Digite o ano de emissão de seu RG."))
 
-    return checar
+//   let idade = (ano1, ano2) => ano1 - ano2
+//   let renovacao = (ano1, ano3) => ano1 - ano3
 
-  }
-  console.log(checar(idade(anoAtual,anoNascimento), renovacao(anoAtual, anoRG)))
-}
+//   function checar(valor1, valor2) {
+//     let logica1 = ((valor1 <= 20) && (valor2 >= 5)) 
+//     let logica2 = ((valor1 <= 50) && (valor2 >= 10)) 
+//     let logica3 = ((valor1 > 50) && (valor2 >= 15)) 
+
+//    checar = (logica1 || logica2 || logica3)
+
+//     return checar
+
+//   }
+//   console.log(checar(idade(anoAtual,anoNascimento), renovacao(anoAtual, anoRG)))
+// }
 
 
-// EXERCÍCIO 14
+// // EXERCÍCIO 14
 
-function checaAnoBissexto(ano) {
-  // implemente sua lógica aqui
-   let bissexto = (ano % 4 == 0) && ( (ano % 100 != 0) || (ano % 400 == 0) );
-   return bissexto
-}
+// function checaAnoBissexto(ano) {
+//   // implemente sua lógica aqui
+//    let bissexto = (ano % 4 == 0) && ( (ano % 100 != 0) || (ano % 400 == 0) );
+//    return bissexto
+// >>>>>>> master
+// }
 
-// EXERCÍCIO 15
-function checaValidadeInscricaoLabenu() {
-  // implemente sua lógica aqui
+// // EXERCÍCIO 15
+// function checaValidadeInscricaoLabenu() {
+//   // implemente sua lógica aqui
+// <<<<<<< objetos
+
+// =======
   
-  let pergunta1 = prompt("Você tem mais de 18 anos? - Sim ou Não")
-  let pergunta2 = prompt("Você possui ensino médio completo? - Sim ou Não")
-  let pergunta3 = prompt("Você possui disponibilidade exclusiva durante os horários do curso? - Sim ou Não")
+//   let pergunta1 = prompt("Você tem mais de 18 anos? - Sim ou Não")
+//   let pergunta2 = prompt("Você possui ensino médio completo? - Sim ou Não")
+//   let pergunta3 = prompt("Você possui disponibilidade exclusiva durante os horários do curso? - Sim ou Não")
 
-   console.log(pergunta1.trim() === "sim", pergunta2.trim() === "sim", pergunta3.trim() === "sim" === true) 
-}
+//    console.log(pergunta1.trim() === "sim", pergunta2.trim() === "sim", pergunta3.trim() === "sim" === true) 
+// >>>>>>> master
+// }
