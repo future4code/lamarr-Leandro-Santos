@@ -1,4 +1,4 @@
-// Porjeto Blackjack
+// Projeto Blackjack
 
 console.log("Boas vindas ao jogo de Blackjack! 🃏🎴") // Questão 1
 const carta = comprarCarta();     
@@ -34,6 +34,7 @@ if (decisao) {
 }
 } else {
    console.log("O jogo acabou!")
+   
 }
 
 
