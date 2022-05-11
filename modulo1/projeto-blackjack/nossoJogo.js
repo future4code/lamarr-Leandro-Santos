@@ -1,6 +1,7 @@
-// Porjeto Blackjack
+// Projeto Blackjack
 
 console.log("Boas vindas ao jogo de Blackjack! 🃏🎴") // Questão 1
+
 const carta = comprarCarta();     
 // console.log(carta.texto) 
 // console.log(carta.valor)
@@ -19,7 +20,6 @@ let cartaComputador2 = comprarCarta()
 let pontosTotaisUser = (cartaUsuario1.valor + cartaUsuario2.valor) 
 let pontosTotaisPC = (cartaComputador1.valor + cartaComputador2.valor)
 
-
 // escolhas do if...else
 if (decisao) {
    console.log(`Usuário - Cartas: ${cartaUsuario1.texto} e ${cartaUsuario2.texto} -> Pontuação Usuário = ${pontosTotaisUser}`)
@@ -34,6 +34,7 @@ if (decisao) {
 }
 } else {
    console.log("O jogo acabou!")
+   
 }
 
 
