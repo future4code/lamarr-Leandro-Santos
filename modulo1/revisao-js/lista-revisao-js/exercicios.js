@@ -155,19 +155,19 @@ function retornaPessoasNaoAutorizadas(pessoas) {
 
 // EXERCÍCIO 14
 function retornaContasComSaldoAtualizado(contas) {
-  // let soma = contas.reduce(function(acumulator, valorTotal) {
-  //     return acumulator + valorTotal.compras;
-  //   },0)
-  //   console.log(soma);  
-  //   return soma  
-  function somaNumeros(numeros) {
-    let soma = 0;
-    for(let i = 0 ; i < numeros.length ; i++) {
-      soma += numeros[i]
-    } return soma
-  }
-  console.log((contas[0].compras))
+
+let somaCompras = 0
+for (let i=0; i<contas.length; i++)
+{
+for (let valores of contas[i].compras){
+   somaCompras = somaCompras+valores;
+  contas[i].saldoTotal = contas[i].saldoTotal-somaCompras;
+  return contas
 }
+}
+//não consegui terminar, o negócio não somou para subrair...
+}
+
 
 
 
@@ -187,20 +187,14 @@ function retornaArrayOrdenadoAlfabeticamente(consultas) {
 
 // EXERCÍCIO 15B
 function retornaArrayOrdenadoPorData(consultas) {
-  // const ordenado = consultas.sort(function(a,b){
-  //   if (a.dataDaConsulta < b.dataDaConsulta) {
-  //     return 1;
-  //   }
-  //   if (a.dataDaConsulta > b.dataDaConsulta) {
-  //     return -1;
-  //   }
-  // }) 
 const ordenado = (function(a,b){
-  if (a.dataDaConsulta > b.dataDaConsulta) {
-    
-   return consultas.sort(ordenado)
+  if (a.dataDaConsulta < b.dataDaConsulta) {
+    return 1;
   }
-
-})
-
+  if (a.dataDaConsulta > b.dataDaConsulta) {
+    return -1;
+  }
+}) 
+ return  consultas.sort(ordenado)
+ // aqui não acessou a dataDaConsulta
 }
