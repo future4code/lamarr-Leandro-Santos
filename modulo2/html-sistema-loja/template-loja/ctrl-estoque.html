@@ -1,26 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Controle de Estoque</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Pet Store</title>
 </head>
 <body>
-    <header>
-        <h3>Pet Store</h3>
+    <header class="cabecalho">
+        <h1> <a href="./index.html"><em>Pet Store</em>!</a>   <img width="30px" src="https://th.bing.com/th/id/OIP.QijEENYNc8CA4-z5VFKHAAHaHa?pid=ImgDet&rs=1" alt="pata de um pet"></h1> 
+        
+        <nav>
+            <strong>
+                <ul class="nav-list">
+                    <li> <a href="./index.html">Página Inicial</a></li>
+                    <li> <a href="./ctrl-estoque.html">Controle de Estoque</a></li>
+                    <li><a href="./add-produto.html">Adicionar Produto</a></li>
+                    <li><a href="./funcionarios.html">Funcionários</a></li>
+                </ul>                     
+            </strong>
+            
+        </nav>
     </header>
-    
-    <nav>
-        <a href="./index.html">Página Inicial</a>
-        <a href="./ctrl-estoque.html">Controle de Estoque</a>
-        <a href="./add-produto.html">Adicionar Produto</a>
-        <a href="./funcionarios.html">Funcionários</a>
-    </nav>
+    <h3>A loja do seu Pet 🐶 😸</h3>
 
+<section class="estoque">
     <h2>Controle de Estoque</h2>
 
-    <table>
+    <table class="tabela">
         <tr>
             <th>Foto</th>
             <th>Descrição</th>
@@ -64,6 +72,16 @@
         </tr>
 
     </table>
+</section>
+<footer class="rodape">
+    <!--OBS.: Coloquei link para login das redes sociais só para treinar e ver como seria levar para a página da loja em cada rede social-->
+    <p>Siga-nos nas redes sociais e fique por dentro de todas as nossas novidades!</p>
+   <a href="https://www.instagram.com/"> <img  width="30px"  src="./img/icon-instagram.png"/></a>
+
+   <a href="https://pt-br.facebook.com/"> <img width="30px" src="./img/icon-facebook.png" alt="Facebook"/></a>
+
+   <a href="https://twitter.com/i/flow/login"><img width="30px" src="./img/icon-twitter.png" alt="Twitter"/></a> 
+</footer>
 
 </body>
 </html>
