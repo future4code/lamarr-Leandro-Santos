@@ -1,0 +1,47 @@
+:root{
+margin: 0%;
+padding: 0 80px;
+background-image: url(https://th.bing.com/th/id/R.25cdcc58154c2e67d3ff29e33b76fa2d?rik=Y2Vf7GzQjxnV4A&riu=http%3a%2f%2fwww.krin.hr%2fimages%2f034b-beige-royal-marble-K212PA.jpg&ehk=PXWWUsLjHRn2dV3DMvUilD%2bsNEiu1zgOHaHZX4qkKlU%3d&risl=&pid=ImgRaw&r=0);
+
+font-family: 'Roboto', sans-serif;
+}
+
+
+
+#message{
+  height: 70px;
+  width:100%;
+  }
+
+ p,h1, legend{
+   background-position: center;
+   background-color: rgb(255, 255, 255, 0.1);
+   backdrop-filter: blur(10px);
+   -webkit-backdrop-filter: blur(10px);
+   padding: 1%;
+   color: rgb(0, 0, 0);
+   text-align:center;
+   border-color: white;
+  }
+  
+  #enviar{
+    background-color: rgb(95, 186, 95);
+    color: rgb(0, 0, 0);
+    width: 20vh;
+    height: 5vh;
+    align-items: center;
+    font-size: medium;  
+    
+  }
+
+  label{color: rgb(0, 0, 0);
+  font-size: medium;
+}
+#notification{
+  text-align: left;
+}
+  
+
+
+
+

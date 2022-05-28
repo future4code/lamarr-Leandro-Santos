@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+  <link rel="stylesheet" href="./formulario.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário escolar </title>
+</head> 
+<body>
+  <header>
+    <div>
+      <h1>Inscreva-se!</h1>
+      <p>Venha estudar programação conosco!👨🏻‍💻</p>
+    </div>
+  </header>
+
+  <form>    
+    <fieldset>
+      
+      <legend>Dados pessoais</legend>
+      <label for="Nome">Nome</label> <br>
+      <input type="Name" placeholder="Digite seu nome" title="Digite seu nome" required>
+      <br>
+      <br>
+      <label for="email">Email</label> <br>
+      <input type= "email" placeholder="Digite seu e-mail" title="Digite seu e-mail" required pattern=".+\-\@">
+      <br>
+      <br>
+      <label for="idade">Idade</label> <br>
+      <input type= "number" placeholder="Digite sua idade" title="Digite sua idade" required >
+    </fieldset>
+    <br>
+    <fieldset>
+      <legend>Escolha seu curso</legend>
+      <label for="conhecimentos">Possui conhecimentos em programação?</label> <br>
+      <select required> 
+        <option>
+          Nenhum
+        </option>
+        <option>
+          Básico
+        </option>
+        <option>
+          Intermediário
+        </option>
+        <option>
+          Avançado
+        </option>
+      </select>
+      <br>
+      <br>
+      <label for="Cursos desejados">Cursos desejados</label> <br>
+      <select required>
+        <option>
+          FrontEnd
+        </option>
+        <option>
+          BackEnd
+        </option>
+        <option>
+          FullStack
+        </option>
+        <option>
+          UX Design
+        </option>
+      </select>
+      <br>
+      <br>
+      <label for="Turno desejado">Turno desejado</label> <br> 
+      <label for="yep">Diurno</label>
+      <input checked type="radio" id="radio" name="noturno" value="yes">
+      <label for="noturno">Noturno</label>
+      <input type="radio" id="noturno" name="noturno" value="no">
+         <br>
+      <br>
+    </fieldset>
+    <br>
+    <br>
+    <fieldset>
+      <label for="message">Conte-nos sobre você, suas 
+      experiências, conhecimento e expectativas no curso:</label>
+      <br>
+      <textarea name="message" id="message" cols="30" rows="10" placeholder="Digite seu texto aqui" title="Digite seu texto aqui"></textarea>
+      
+    <br>
+    <br>
+    <fieldset>
+      <legend id="notification"> Opções de notificação</legend>
+      <div>
+        <label for="emails">Receber E-mails</label>
+      <input type="checkbox" name="emails" id="emails" value="Ok" checked="">
+      </div>
+      <div>
+      <label for="sms">Receber SMS</label>
+      <input type="checkbox" name="sms" id="sms" value="Ok" checked=""> </div>
+      <div>
+      <label for="Notificações">Receber Notificações</label>
+      <input type="checkbox" name="Notificações" id="Notificações" value="Ok" checked=""> </div>
+      </fieldset>
+    </fieldset>
+    <br>
+    <br>
+    <input type="submit" id="enviar">
+   
+
+  </form>
+</body>
+</html>
+
+
