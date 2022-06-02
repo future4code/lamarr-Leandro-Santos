@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible"  content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portifólio - Leandro Lima</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="cabecalho">
+      <!--<img width="80px"  src="./img/logo LL.jpg" alt="logomarca iniciais">  -->
+      <h1 class="name"><a href="./index.html">Leandro Lima</a></h1>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="./index.html">Início</a></li>
+          <li><a href="./about.html">Sobre</a></li>
+          <li><a href="./projects.html">Projetos</a></li>
+          <li><a href="./contact.html">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div>
+        <section>
+          <h2 class="h2-contact">Entre em contato comigo.</h2>
+          <p class="p-contact">
+            Se você quiser conversar sobre um projeto/trabalho ou apenas tirar
+            dúvidas, preencha o formulário abaixo.
+          </p>
+          <form action="#">
+            <fieldset class="contact">
+              <legend><p>Dados pessoais</p></legend>
+              <label for="Nome">Nome</label>
+              <input
+                type="Name"
+                placeholder="Digite seu nome"
+                title="Digite seu nome"
+                required=""
+              />
+              <br />
+              <br />
+              <label for="email">Email</label>
+              <input
+                type="email"
+                placeholder="Digite seu e-mail"
+                title="Digite seu e-mail"
+                required=""
+                pattern=".+\-\@"
+              />
+              <br />
+              <br />
+              <label class="message" for="message">Mensagem</label>
+              <textarea
+                name="message"
+                id="message"
+                cols="22"
+                rows="5"
+                placeholder="Digite seu texto aqui"
+                title="Digite seu texto aqui"
+                required=""
+              ></textarea>
+              <br />
+              <input class="botao-enviar" type="submit" id="enviar" />
+            </fieldset>
+          </form>
+        </section>
+      </div>
+    </main>
+    <footer class="footer" id="footer">
+      <a target="_blanck" href="https://github.com/leeoliima">
+        <img width="30px" src="./img/icon-github-white.png" alt="GitHub"
+      /></a>
+
+      <a
+        target="_blanck"
+        href="https://www.linkedin.com/in/leandro-lima-62b8b6113/"
+      >
+        <img width="30px" src="./img/icon-linkedin-white.png" alt="LinkedIn"
+      /></a>
+
+      <a target="_blanck" href="https://www.instagram.com/leeo_liima/"
+        ><img width="30px" src="./img/icon-instagram-white.png" alt="Instagram"
+      /></a>
+      <p class="footer-text">
+        Copyright © 2022 All rights reserved by Leandro Lima
+      </p>
+    </footer>
+  </body>
+</html>

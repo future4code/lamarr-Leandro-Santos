@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="stylesheet" href="./cronometro.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronômetro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Supermercado+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <main>
+        <fieldset>
+            <div class="cronometro">
+                <h1 id="watch">00:00:00</h1>
+
+                <button class="start-btn" onclick="start()">Iniciar</button>
+                <button class="pause-btn" onclick="pause()">Pausar</button>
+                <button class="stop-btn" onclick="stop()">Parar</button>
+        </fieldset>
+
+    </main>
+
+    <script src="./cronometro.js"></script>
+</body>
+
+</html>
