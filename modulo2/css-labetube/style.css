@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: black;
+}
+
+body{
+  background-image: url(https://th.bing.com/th/id/OIP.hW8x2fR1UBx1Usl9vnJzGQHaFj?pid=ImgDet&rs=1); 
+   
+}
+
+/* header */
+header {
+  display: flex;
+  background: orange;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+h1 {
+  margin-left: 10px;
+}
+
+input {
+  width: 150px;
+  margin-right: 40px;
+  text-align: center;
+  border-radius: 10px;
+  border:0;
+  font-size: 15px;
+}
+
+/* main */
+
+main {
+  display: grid;
+  grid-template-rows: 320px 320px 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 30px;
+  margin: 150px;
+  text-align: center;
+}
+
+.cards {
+  display: grid;
+  text-align: center;
+  border: 1px solid green;
+  box-shadow: 0 0 10px rgb(46, 45, 45);
+}
+.cards img {
+  display: grid;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+ 
+
+/* paginas videos */
+
+.cardsvideo  {
+  margin-left: 60px;
+  align-items: center;
+  width: 80em;
+  height: 45em;
+
+  border: 5px solid green;  
+}
+
+
+.cardsvideo video {
+  align-items: center;
+  width: 80em;
+  
+}
+
+
+/* footer */
+
+footer {
+  background-color: rgb(52, 50, 50);
+  padding: 15px;
+  font-size: 30px;
+  color: white;
+  text-align: center;
+  bottom: 0;
+}
