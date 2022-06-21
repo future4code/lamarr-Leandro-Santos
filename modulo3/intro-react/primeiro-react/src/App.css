@@ -1,0 +1,32 @@
+
+
+.App {
+  text-align: center;
+}
+
+h1 {
+  margin-top: 34px;
+  color:#282c34
+}
+
+p:hover{
+  text-decoration:underline;
+  }
+
+.img-perfil {
+  height: 40vmin;
+  pointer-events: none;
+  border-radius: 100%;
+}
+button {
+  border-radius: 5px;
+  border: 1px solid gray;
+  padding: 5px;
+}
+button:hover {
+  background-color: #282c34;
+  color: white;
+  border-radius: 5px;
+}
+
+
