@@ -1,0 +1,20 @@
+.page-section-contact {
+  display: flex;
+  align-items: center;
+  border: 1px solid black;
+  width: 546px;
+  padding: 15px 30px;
+  margin: 10px auto;
+}
+
+.card-pequeno > img {
+  width: 40px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.page-section-contact > div {
+  display: flex;
+  align-items: center;
+
+}
