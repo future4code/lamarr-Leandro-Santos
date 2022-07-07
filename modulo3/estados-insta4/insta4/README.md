@@ -1,2 +1,2 @@
 LINK SURGE:
-decorous-road.surge.sh
+http://screeching-thunder.surge.sh/
