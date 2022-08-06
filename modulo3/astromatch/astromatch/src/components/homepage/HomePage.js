@@ -1,16 +1,32 @@
 import { Card } from "../card/Card";
-import {Container, ButtonNO, ButtonYes} from "../homepage/style"
+import React, { useState } from "react";
+import { MatchPage } from "../matchpage/MatchPage";
 
+export function Homepage() {
+  const [openMatchpage, setOpenMatchpage] = useState(false);
+  const [botao, setBotao] = useState(true);
 
-export function HomePage(){
-  return(
-    <Container>
-     <h1> Astro<span>Match💘</span> </h1>
-      <Card 
-      photo={"https://us-central1-missao-newton.cloudfunctions.net/astroMatch/:aluno/person"}     
-      />
-      <ButtonNO>No</ButtonNO>
-      <ButtonYes>Match</ButtonYes>
-    </Container>
+  function renderizar() {
+    switch (openMatchpage) {
+      case false:
+        return <Card trocaTela={trocaTela} />;
+      case true:
+        return <MatchPage trocaTela={trocaTela} />;
+    }
+  }
+  
+  function trocaTela() {
+    if (openMatchpage === false) {
+      setOpenMatchpage(true);
+      setBotao(false);
+    } else {
+      setOpenMatchpage(false);
+      setBotao(true);
+    }
+    return (
+    <div>
+        {renderizar()}
+    </div>
     )
+  }
 }
