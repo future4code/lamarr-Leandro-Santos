@@ -18,10 +18,14 @@ export const goToAdminHomePage = (navigate) => {
   navigate("/admin/trips/list");
 };
 
-export const goLToTripDetailsPage = (navigate) => {
+export const goToTripDetailsPage = (navigate) => {
   navigate("/admin/trips/:id");
 };
 
 export const goToCreateTripPage = (navigate) => {
   navigate("/admin/trips/create");
+};
+
+export const goToBack = (navigate) => {
+  navigate(-1);
 };
