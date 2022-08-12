@@ -13,7 +13,7 @@ function CreateTripPage() {
       </p>
 
       <ul>
-        <input></input>
+        <input></input> 
         <input></input>
         <input></input>
         <input></input>
