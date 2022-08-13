@@ -1,26 +1,35 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { goToHomePage } from "../routes/Coordinator";
+import { Buttons } from "./style";
 
 function CreateTripPage() {
   const navigate = useNavigate();
 
   return (
     <div>
-      <p>
-              CreateTripPage.js → Formulário para o administrador criar uma nova
-        viagem
-      </p>
+      <h2> Criar uma nova viagem</h2>
 
       <ul>
-        <input></input> 
-        <input></input>
-        <input></input>
-        <input></input>
-        <input></input>
+        <input type="text" placeholder="Nome"></input>
+        <br />
+        <select name="opcoes" id="select">
+          <option value="">Escolha um Planeta</option>
+          <option value="Terra">Terra</option>
+          <option value="Saturno">Saturno</option>
+          <option value="outro">Marte</option>
+          <option value="outro">Outro</option>{" "}
+        </select>{" "}
+        <br />
+        <input type="date"></input>
+        <br />
+        <input type="text" placeholder="Descrição"></input>
+        <br />
+        <input type="text" placeholder="Duração em dias"></input>
+        <br />
       </ul>
-      <button onClick={() => goToHomePage(navigate)}>Logout</button>
-      <button>Criar</button>
+      <Buttons onClick={() => goToHomePage(navigate)}>Logout</Buttons>
+      <Buttons>Criar</Buttons>
     </div>
   );
 }

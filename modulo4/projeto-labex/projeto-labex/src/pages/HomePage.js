@@ -1,35 +1,32 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-
 import { goToLoginPage, goToListTripsPage } from "../routes/Coordinator";
+import { Button, HomeDiv, HomeSection } from "./style";
 
 function HomePage() {
   const navigate = useNavigate();
 
-  
   return (
-    <div>
-      <h1>LabeX</h1>
-      <p>
-              HomePage.js → Para o usuário escolher entre Área Administrativa e Lista
-        de Viagens
-      </p>
+    <HomeDiv>
+      <HomeSection>
+        <h1>LabeX</h1>
+      </HomeSection>
 
-      <button
+      <Button
         onClick={() => {
           goToListTripsPage(navigate);
         }}
       >
-        Viagens
-      </button>
-      <button
+        Ver Viagens
+      </Button>
+      <Button
         onClick={() => {
           goToLoginPage(navigate);
         }}
       >
-        Admin
-      </button>
-    </div>
+        Login Admin
+      </Button>
+    </HomeDiv>
   );
 }
 

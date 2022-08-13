@@ -1,30 +1,32 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { goToBack, goToCreateTripPage, goToHomePage } from "../routes/Coordinator";
+import {
+  goToBack,
+  goToCreateTripPage,
+  goToHomePage,
+} from "../routes/Coordinator";
+import { Buttons } from "./style";
 
 function AdminHomePage() {
   const navigate = useNavigate();
   return (
     <div>
-      <p>
-        AdminHomePage.js → Para o administrador ver a lista de viagens e poder
-        deletá-las ou acessar o detalhe de cada uma delas
-      </p>
-      <button
+      <h2>Painel Administrativo</h2>
+      <Buttons
         onClick={() => {
           goToBack(navigate);
         }}
       >
         Voltar
-      </button>
-      <button
+      </Buttons>
+      <Buttons
         onClick={() => {
           goToCreateTripPage(navigate);
         }}
       >
         Criar Viagem
-      </button>
-      <button onClick={() => goToHomePage(navigate)}>Logout</button>
+      </Buttons>
+      <Buttons onClick={() => goToHomePage(navigate)}>Logout</Buttons>
     </div>
   );
 }

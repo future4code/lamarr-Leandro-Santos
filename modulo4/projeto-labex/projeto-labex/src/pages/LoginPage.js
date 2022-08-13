@@ -1,33 +1,36 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { goToAdminHomePage, goToBack } from "../routes/Coordinator";
+import { Buttons } from "./style";
 
 function LoginPage() {
   const navigate = useNavigate();
 
   return (
     <div>
-      <p> LoginPage.js → Para fazermos login como administrador</p>
+      <h2>Login</h2>
 
       <ul>
-        <input></input>
-        <input></input>       
+        <input type="text" placeholder="Digite seu e-mail"></input>
+        <br />
+        <input type="password" placeholder="Digite sua senha"></input>
+        <br />
       </ul>
 
-      <button
+      <Buttons
         onClick={() => {
           goToBack(navigate);
         }}
       >
         Voltar
-      </button>
-      <button
+      </Buttons>
+      <Buttons
         onClick={() => {
           goToAdminHomePage(navigate);
         }}
       >
         Entrar
-      </button>
+      </Buttons>
     </div>
   );
 }
