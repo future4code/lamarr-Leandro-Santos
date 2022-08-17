@@ -4,12 +4,10 @@ import { goToBack } from "../routes/Coordinator";
 
 function TripDetailsPage() {
   const navigate = useNavigate();
+
   return (
     <div>
-      <p>
-        TripDetailsPage.js → Para o administrador ver o detalhe de uma viagem
-        específica, bem como os candidatos que aplicaram para ela
-      </p>
+      <p>TripDetailsPage.js →</p>
 
       <button
         onClick={() => {

@@ -62,17 +62,21 @@ export const Button = styled.button`
 
 //LIST TRIPS
 
-export const ListTrips = styled.section`
+export const ListTripsDiv = styled.div`
+  display: flex;
   flex-wrap: wrap;
-  width: 100%;
+  width: 100vw;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
 `;
 
 export const Card = styled.section`
   text-align: center;
   align-items: center;
   margin: 20px;
-  padding: 20px;
-  width: 30%;
+  padding: 10px;
+  width: 30vw;
   border-radius: 10px;
   box-shadow: 0px 6px 10px rgba(15, 15, 15, 0.65);
   transition: all 0.2s;
@@ -86,15 +90,16 @@ export const Card = styled.section`
 
 export const Buttons = styled.button`
   font-family: 'Silkscreen', cursive;
-  background-color: #222;
-  border-radius: 100px;  
-  color: #fff;
-  cursor: pointer; 
-  margin:30px 5px 30px 5px;
   font-size: 15px;
+  background-color: #222;
+  color: #fff;
+  border-radius: 100px;  
+  cursor: pointer; 
   padding: 10px ;
-  text-align: center; 
-  align-items:center;   
+  display: inline-block;
+  margin: 10px;  
+  justify-content: center;
+  align-items: center;
 }
 :disabled {
    pointer-events: none;

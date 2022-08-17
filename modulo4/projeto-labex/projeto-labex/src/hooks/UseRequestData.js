@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 //HOOK GET
 export const useRequestDataGet = (url) => {
@@ -33,7 +33,7 @@ export const useRequestDataPost = (url) => {
   useEffect(() => {
     setIsLoading(true);
     axios
-      .get(url)
+      .post(url)
       .then((response) => {
         setIsLoading(false);
         setData(response.data);
