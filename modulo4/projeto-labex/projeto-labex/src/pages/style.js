@@ -1,6 +1,107 @@
 import styled from "styled-components";
 
-export const HomeDiv = styled.section`
+//      STYLED GENERAL
+export const CentralizerDiv = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  height: 50vh;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  h2 {
+    font-size: 40px;
+    text-align: center;
+    align-items: center;
+  }
+  input {
+    width: 25vw;
+    text-align: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 7px;
+    margin: 7px;
+    font-size: 15px;
+    color: black;
+    border: 1px solid #eeeeee;
+    border-bottom: 5px solid #383838;
+  }
+  fieldset {
+    text-align: center;
+    align-items: center;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 7px;
+    font-size: 15px;
+    border: 1px solid lightgray;
+  }
+  select {
+    width: 26vw;
+    text-align: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 7px;
+    margin: 7px;
+    font-size: 15px;
+    color: black;
+    border: 1px solid #eeeeee;
+    border-bottom: 5px solid #383838;
+  }
+`;
+
+export const Buttons = styled.button`
+  font-family: 'Silkscreen', cursive;
+  font-size: 20px;
+  background-color: #222;
+  color: #fff;
+  border-radius: 100px;  
+  cursor: pointer; 
+  padding: 10px ;
+  display: inline-block;
+  margin: 20px;  
+  justify-content: center;
+  align-items: center;
+}
+:disabled {
+  pointer-events: none;
+}
+
+:hover {
+   box-shadow: rgba(10, 10, 10, 25) 0 10px 15px;
+   transform: translateY(-2px);
+ }
+ 
+ :active {
+   box-shadow: none;
+   transform: translateY(0);
+   `;
+
+export const StyledH2 = styled.h2`
+  font-size: 40px;
+  text-align: center;
+  align-items: center;
+  padding: 0 15px 0 15px;
+`;
+
+export const Header = styled.div`
+  background-image: url(https://www.emerstone.com/wp-content/uploads/2016/12/Black-Galaxy-Full-Slab.jpg);
+  background-size: cover;
+  background-repeat: repeat;
+  display: inline-block;
+  height: 20vh;
+  width: 100vw;
+  text-align: center;
+  align-items: center;
+  color: white;
+  margin-bottom:10vh;
+`;
+
+//          HOME PAGE
+export const HomeDiv = styled.div`
+  background-image: url(https://www.emerstone.com/wp-content/uploads/2016/12/Black-Galaxy-Full-Slab.jpg);
+  background-size: cover;
+  background-repeat: repeat;
+  height: 40vh;
   text-align: center;
   align-items: center;
   color: white;
@@ -16,30 +117,31 @@ export const HomeDiv = styled.section`
     }
   }
 `;
-
 export const HomeSection = styled.section`
-  background-image: url(https://www.emerstone.com/wp-content/uploads/2016/12/Black-Galaxy-Full-Slab.jpg);
-  margin-bottom: 50px;
-  background-size: 50%;
-  background-repeat: repeat;
   display: flex;
-  height: 40vh;
+  width: 100vw;
+  align-items: center;
+  text-align: center;
   font-family: Roboto;
-  font-size: 50px;
   h1 {
-    text-align: center;
-    align-items: center;
-    color: white;
+    height: 50vh;
+    color: whitesmoke;
+    width: 100vw;
+    border-radius: 50%;
+    margin: 0 auto;
+    text-shadow: 0 5px #4a403a;
   }
 `;
 
 export const Button = styled.button`
+   
   font-family: 'Silkscreen', cursive;
   background-color: #222;
   border-radius: 100px;  
   color: #fff;
   cursor: pointer; 
-  margin:50px;
+  margin:60px;
+  margin-top: 15vh;
   font-size: 20px;
   padding: 20px ;
   text-align: center; 
@@ -62,18 +164,30 @@ export const Button = styled.button`
 
 //LIST TRIPS
 
-export const ListTripsDiv = styled.div`
-  display: flex;
+export const LisTripDiv = styled.div`
   flex-wrap: wrap;
+  display: flex;
   width: 100vw;
   align-items: center;
   text-align: center;
   justify-content: center;
+  h2 {
+    text-align: center;
+    align-items: center;
+  }
 `;
 
 export const Card = styled.section`
+  background: rgb(50, 50, 50);
+  background: radial-gradient(
+    circle,
+    rgba(50, 50, 50, 1) 39%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  color: white;
   text-align: center;
   align-items: center;
+  margin-bottom: 50px;
   margin: 20px;
   padding: 10px;
   width: 30vw;
@@ -82,35 +196,21 @@ export const Card = styled.section`
   transition: all 0.2s;
   h2 {
     text-decoration: underline;
+    color: white;
   }
-  p {
-    font-size: 18px;
+  p,
+  h2,
+  h3 {
+    color: white;
   }
 `;
+//APPLICATION FORM PAGE
 
-export const Buttons = styled.button`
-  font-family: 'Silkscreen', cursive;
-  font-size: 15px;
-  background-color: #222;
-  color: #fff;
-  border-radius: 100px;  
-  cursor: pointer; 
-  padding: 10px ;
-  display: inline-block;
-  margin: 10px;  
-  justify-content: center;
+export const FormDiv = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
   align-items: center;
-}
-:disabled {
-   pointer-events: none;
- }
- 
- :hover {
-   box-shadow: rgba(10, 10, 10, 25) 0 10px 15px;
-   transform: translateY(-2px);
- }
- 
- :active {
-   box-shadow: none;
-   transform: translateY(0);
- `;
+  text-align: center;
+  justify-content: center;
+`;

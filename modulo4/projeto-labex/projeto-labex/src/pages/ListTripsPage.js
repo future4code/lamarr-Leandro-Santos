@@ -4,7 +4,7 @@ import { goToBack, goToApplicationFormPage } from "../routes/Coordinator";
 
 import { BASE_URL } from "../constants/constants";
 import { useRequestDataGet } from "../hooks/UseRequestData";
-import { Buttons, Card, ListTripsDiv } from "./style";
+import { Buttons, Card, LisTripDiv } from "./style";
 
 function ListTripsPage() {
   const navigate = useNavigate();
@@ -17,25 +17,25 @@ function ListTripsPage() {
     dataTrip &&
     dataTrip.trips.map((data) => {
       return (
-        <ListTripsDiv>
+        <LisTripDiv>
           <Card key={data.id}>
             <h2>{data.name}</h2>
-            <h3>{data.planet} </h3>
-            <p>{data.durationInDays}</p>
-            <p>{data.date}</p>
+            <h3> {data.planet} </h3>
+            <p>Duração em dias: {data.durationInDays}</p>
+            <p>Data: {data.date}</p>
             <p>{data.description}</p>{" "}
           </Card>
-        </ListTripsDiv>
+        </LisTripDiv>
       );
     });
 
   return (
-    <ListTripsDiv>
+    <LisTripDiv>
       {isLoadingUser && "...Carregando!!! ...."}
       {!isLoadingUser && dataTrip && tripList}
       {!isLoadingUser && !dataTrip && erroUser && erroUser}
 
-      <ListTripsDiv>
+      <LisTripDiv>
         <Buttons
           onClick={() => {
             goToBack(navigate);
@@ -50,8 +50,8 @@ function ListTripsPage() {
         >
           Inscrever-se
         </Buttons>
-      </ListTripsDiv>
-    </ListTripsDiv>
+      </LisTripDiv>
+    </LisTripDiv>
   );
 }
 
