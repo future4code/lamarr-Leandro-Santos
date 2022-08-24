@@ -19,7 +19,7 @@ export const goToAdminHomePage = (navigate) => {
 };
 
 export const goToTripDetailsPage = (navigate) => {
-  navigate("/admin/trips/:id");
+  navigate(`/admin/trips/NoIFVcOiSgTKTIPVZwXS`);
 };
 
 export const goToCreateTripPage = (navigate) => {

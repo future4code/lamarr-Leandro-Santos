@@ -1,10 +1,9 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { goToBack, goToApplicationFormPage } from "../routes/Coordinator";
-
 import { BASE_URL } from "../constants/constants";
 import { useRequestDataGet } from "../hooks/UseRequestData";
-import { Buttons, Card, LisTripDiv } from "./style";
+import { Buttons, Card, LisTripDiv, Loading } from "./style";
 
 function ListTripsPage() {
   const navigate = useNavigate();
@@ -17,8 +16,8 @@ function ListTripsPage() {
     dataTrip &&
     dataTrip.trips.map((data) => {
       return (
-        <LisTripDiv>
-          <Card key={data.id}>
+        <LisTripDiv key={data.id}>
+                   <Card key={data.id}>
             <h2>{data.name}</h2>
             <h3> {data.planet} </h3>
             <p>Duração em dias: {data.durationInDays}</p>
@@ -31,7 +30,7 @@ function ListTripsPage() {
 
   return (
     <LisTripDiv>
-      {isLoadingUser && "...Carregando!!! ...."}
+  
       {!isLoadingUser && dataTrip && tripList}
       {!isLoadingUser && !dataTrip && erroUser && erroUser}
 
@@ -40,16 +39,17 @@ function ListTripsPage() {
           onClick={() => {
             goToBack(navigate);
           }}
-        >
+          >
           Voltar
         </Buttons>
         <Buttons
           onClick={() => {
             goToApplicationFormPage(navigate);
           }}
-        >
+          >
           Inscrever-se
         </Buttons>
+      <Loading>{isLoadingUser && "...Carregando!!! ...."}</Loading>
       </LisTripDiv>
     </LisTripDiv>
   );

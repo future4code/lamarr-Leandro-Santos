@@ -4,9 +4,12 @@ import { useForm } from "../hooks/UseForm";
 import { goToBack } from "../routes/Coordinator";
 import { Buttons, CentralizerDiv, Header, StyledH2 } from "./style";
 import axios from "axios";
+import { useRequestDataGet } from "../hooks/UseRequestData";
+import { BASE_URL } from "../constants/constants";
 
 function ApplicationFormPage() {
   const navigate = useNavigate();
+
 
   const [form, onChange, clear] = useForm({
     name: "",
@@ -21,7 +24,7 @@ function ApplicationFormPage() {
 
     axios
       .post(
-        "https://us-central1-labenu-apis.cloudfunctions.net/labeX/leandro-lima-lamarr/trips/:id/apply",
+        `https://us-central1-labenu-apis.cloudfunctions.net/labeX/leandro-lima-lamarr/trips/${form.id}/apply`,
         form
       )
       .then((response) => {
@@ -33,6 +36,15 @@ function ApplicationFormPage() {
     clear();
   };
 
+  
+  const [dataTrip] = useRequestDataGet(`${BASE_URL}trips`);
+
+  const tripsSelect =
+    dataTrip &&
+    dataTrip.trips.map((data) => {
+      return <option key={data.id}>{data.name}</option>;
+    });
+
   return (
     <div>
       <Header>
@@ -40,12 +52,9 @@ function ApplicationFormPage() {
       </Header>
       <CentralizerDiv>
         <form onSubmit={subscribe}>
-          <select name="opcoes" id="select">
-            <option value="">Escolha uma Viagem</option>
-            <option value="Terra">Terra</option>
-            <option value="Saturno">Saturno</option>
-            <option value="outro">Marte</option>
-            <option value="outro">Outro</option>
+          <select id="select">
+            <option disabled >Escolha uma Viagem</option>
+            {tripsSelect}
           </select>
           <br />
           <input
@@ -92,10 +101,8 @@ function ApplicationFormPage() {
             placeholder="Digite sua profissão"
           />
           <br />
-          <select name="paises" id="paises">
-            <option value="selected" selected="selected">
-            Selecione um País
-            </option>
+          <select id="paises">
+            <option value="Selecione um País">Selecione um País</option>
             <option value="Afeganistão">Afeganistão</option>
             <option value="África do Sul">África do Sul</option>
             <option value="Albânia">Albânia</option>
@@ -124,7 +131,7 @@ function ApplicationFormPage() {
             <option value="Bielorrússia">Bielorrússia</option>
             <option value="Bolívia">Bolívia</option>
             <option value="Botswana">Botswana</option>
-            <option value="Brunei">Brasil</option>
+            <option value="Brasil">Brasil</option>
             <option value="Brunei">Brunei</option>
             <option value="Bulgária">Bulgária</option>
             <option value="Burkina Faso">Burkina Faso</option>
@@ -379,6 +386,7 @@ function ApplicationFormPage() {
           </select>
           <br />
           <Buttons
+            type="button"
             onClick={() => {
               goToBack(navigate);
             }}

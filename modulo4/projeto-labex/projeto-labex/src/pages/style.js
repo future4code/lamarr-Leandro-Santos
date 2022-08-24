@@ -83,6 +83,24 @@ export const StyledH2 = styled.h2`
   padding: 0 15px 0 15px;
 `;
 
+export const Loading = styled.div`
+  font-size: 100px;
+  width: 80vw;   
+  
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  color: whitesmoke;
+  background-color: rgb(69, 15, 15);
+  background: radial-gradient(
+    circle,
+    rgba(69, 15, 15, 1) 4%,
+    rgba(50, 50, 50, 1) 44%,
+    rgba(0, 0, 0, 1) 62%
+  );
+  border-radius: 10px;
+`;
+
 export const Header = styled.div`
   background-image: url(https://www.emerstone.com/wp-content/uploads/2016/12/Black-Galaxy-Full-Slab.jpg);
   background-size: cover;
@@ -93,7 +111,7 @@ export const Header = styled.div`
   text-align: center;
   align-items: center;
   color: white;
-  margin-bottom:10vh;
+  margin-bottom: 10vh;
 `;
 
 //          HOME PAGE

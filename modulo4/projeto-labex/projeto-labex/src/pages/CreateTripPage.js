@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "../hooks/UseForm";
 import { goToHomePage } from "../routes/Coordinator";
@@ -9,27 +9,6 @@ import useProtectedPage from "../hooks/UseProtectedPage";
 function CreateTripPage() {
   const navigate = useNavigate();
   useProtectedPage();
-
-  useEffect(() => {
-    const token = localStorage.getItem("token");
-
-    axios
-      .get(
-        "https://us-central1-labenu-apis.cloudfunctions.net/labeX/leandro-lima-lamarr/trip/NoIFVcOiSgTKTIPVZwXS",
-        {
-          headers: {
-            auth: token,
-          },
-        }
-      )
-      .then((response) => {
-        console.log(response.data);
-      })
-      .catch((error) => {
-        console.log("Deu erro: ", error.response);
-      });
-  }, []);
-
   const [form, onChange, clear] = useForm({
     name: "",
     planet: "",
@@ -45,13 +24,22 @@ function CreateTripPage() {
   // const currentDate = `${day}/${month}/${year}`;
   // console.log(currentDate);
 
+  const token = localStorage.getItem("token");
+  const headers = {
+    headers: {
+      auth: token,
+    },
+  };
+
+
   const createTrip = (event) => {
     event.preventDefault();
 
     axios
       .post(
         "https://us-central1-labenu-apis.cloudfunctions.net/labeX/leandro-lima-lamarr/trips",
-        form
+        form,
+        headers
       )
       .then((response) => {
         console.log(response.data);
@@ -82,7 +70,7 @@ function CreateTripPage() {
             placeholder="Nome da viagem"
           ></input>
           <br />
-          <select
+          <select 
             placeholder={"Planeta"}
             onChange={onChange}
             value={form.planet}
@@ -125,6 +113,7 @@ function CreateTripPage() {
           <input
             name="date"
             value={form.date}
+            
             onChange={onChange}
             id="date"
             min="2022-08-18"
@@ -140,9 +129,9 @@ function CreateTripPage() {
             id="description"
             required
             minLength={15}
-            maxLength={60}
+            maxLength={100}
             type="text"
-            title="A descrição deve ter no mínimo 15 e máximo 60 caracteres"
+            title="A descrição deve ter no mínimo 15 e máximo 100 caracteres"
             placeholder="Descrição da viagem"
           ></input>
           <br />
@@ -154,7 +143,7 @@ function CreateTripPage() {
             required
             type="number"
             min="5"
-            max="50"            
+            max="50"
             placeholder="Duração em dias"
           ></input>
           <br />
