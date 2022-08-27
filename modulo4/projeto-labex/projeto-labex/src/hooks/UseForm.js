@@ -9,8 +9,8 @@ export const useForm = (initialState) => {
   };
 
   const clear = () => {
-    setForm(initialState)
-}
+    setForm(initialState);
+  };
 
   return [form, onChange, clear];
 };

@@ -3,13 +3,12 @@ import { useNavigate } from "react-router-dom";
 import { useForm } from "../hooks/UseForm";
 import { goToBack } from "../routes/Coordinator";
 import { Buttons, CentralizerDiv, Header, StyledH2 } from "./style";
-import axios from "axios";
 import { useRequestDataGet } from "../hooks/UseRequestData";
 import { BASE_URL } from "../constants/constants";
+import axios from "axios";
 
 function ApplicationFormPage() {
   const navigate = useNavigate();
-
 
   const [form, onChange, clear] = useForm({
     name: "",
@@ -24,19 +23,15 @@ function ApplicationFormPage() {
 
     axios
       .post(
-        `https://us-central1-labenu-apis.cloudfunctions.net/labeX/leandro-lima-lamarr/trips/${form.id}/apply`,
+        "https://us-central1-labenu-apis.cloudfunctions.net/labeX/leandro-lima-lamarr/trips/NoIFVcOiSgTKTIPVZwXS/apply",
         form
       )
-      .then((response) => {
-        console.log(response.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+      .then((response) => console.log(response.data))
+      .catch((error) => console.log(error.message));
     clear();
   };
+  console.log(form);
 
-  
   const [dataTrip] = useRequestDataGet(`${BASE_URL}trips`);
 
   const tripsSelect =
@@ -53,7 +48,7 @@ function ApplicationFormPage() {
       <CentralizerDiv>
         <form onSubmit={subscribe}>
           <select id="select">
-            <option disabled >Escolha uma Viagem</option>
+            <option disabled>Escolha uma Viagem</option>
             {tripsSelect}
           </select>
           <br />
@@ -101,7 +96,7 @@ function ApplicationFormPage() {
             placeholder="Digite sua profissão"
           />
           <br />
-          <select id="paises">
+          <select id="select" name={"country"} onChange={onChange} type="text">
             <option value="Selecione um País">Selecione um País</option>
             <option value="Afeganistão">Afeganistão</option>
             <option value="África do Sul">África do Sul</option>

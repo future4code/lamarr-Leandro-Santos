@@ -9,6 +9,9 @@ export const CentralizerDiv = styled.div`
   align-items: center;
   text-align: center;
   justify-content: center;
+  p {
+    color: black;
+  }
   h2 {
     font-size: 40px;
     text-align: center;
@@ -49,6 +52,82 @@ export const CentralizerDiv = styled.div`
   }
 `;
 
+export const AdminLists = styled.div`
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  h3 {
+    color: white;
+    justify-content: space-between;
+  }
+`;
+
+export const ButtonDetalhes = styled.button`
+  font-family: 'Silkscreen', cursive;
+  font-size: 10px;
+  background-color: #222;
+  color: #fff;
+  border-radius: 50px;  
+  cursor: pointer;   
+  padding: 5px ;
+  display: inline-block;
+  margin: 20px;  
+  justify-content: center;
+  align-items: center;
+  border: 1px double white;
+}
+:disabled {
+  pointer-events: none;
+}
+
+:hover {
+   box-shadow: rgba(10, 10, 10, 25) 0 10px 15px;
+   transform: translateY(-2px);
+  color: black;
+  background-color:white;
+
+ }
+ 
+ :active {
+   box-shadow: none;
+   transform: translateY(0);
+`;
+
+export const CardAdmin = styled.section`
+  background: rgb(50, 50, 50);
+  background: radial-gradient(
+    circle,
+    rgba(50, 50, 50, 1) 39%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  color: white;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 50px;
+  margin: 20px;
+  justify-content: space-around;
+  padding: 20px;
+  width: 30vw;
+  border-radius: 10px;
+  box-shadow: 0px 6px 10px rgba(15, 15, 15, 0.65);
+  transition: all 0.2s;
+  h3 {
+    color: white;
+    justify-content: space-between;
+  }
+  .trash {
+    width: 25px;
+    height: 35px;
+    cursor: pointer;
+    :hover {
+      color: red;
+    }
+  }
+`;
+
 export const Buttons = styled.button`
   font-family: 'Silkscreen', cursive;
   font-size: 20px;
@@ -60,7 +139,7 @@ export const Buttons = styled.button`
   display: inline-block;
   margin: 20px;  
   justify-content: center;
-  align-items: center;
+  align-items: center;  
 }
 :disabled {
   pointer-events: none;
@@ -84,21 +163,15 @@ export const StyledH2 = styled.h2`
 `;
 
 export const Loading = styled.div`
-  font-size: 100px;
-  width: 80vw;   
-  
+  font-size: 60px;
+  width: 80vw;
+  border-radius: 15px;
   justify-content: center;
   text-align: center;
   align-items: center;
-  color: whitesmoke;
-  background-color: rgb(69, 15, 15);
-  background: radial-gradient(
-    circle,
-    rgba(69, 15, 15, 1) 4%,
-    rgba(50, 50, 50, 1) 44%,
-    rgba(0, 0, 0, 1) 62%
-  );
-  border-radius: 10px;
+  color: black;
+  font-family: "Rubik Dirt", cursive;
+  text-shadow: 0 5px #73777b;
 `;
 
 export const Header = styled.div`

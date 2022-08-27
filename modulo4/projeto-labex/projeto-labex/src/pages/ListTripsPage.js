@@ -17,7 +17,7 @@ function ListTripsPage() {
     dataTrip.trips.map((data) => {
       return (
         <LisTripDiv key={data.id}>
-                   <Card key={data.id}>
+          <Card key={data.id}>
             <h2>{data.name}</h2>
             <h3> {data.planet} </h3>
             <p>Duração em dias: {data.durationInDays}</p>
@@ -30,7 +30,6 @@ function ListTripsPage() {
 
   return (
     <LisTripDiv>
-  
       {!isLoadingUser && dataTrip && tripList}
       {!isLoadingUser && !dataTrip && erroUser && erroUser}
 
@@ -39,17 +38,17 @@ function ListTripsPage() {
           onClick={() => {
             goToBack(navigate);
           }}
-          >
+        >
           Voltar
         </Buttons>
         <Buttons
           onClick={() => {
             goToApplicationFormPage(navigate);
           }}
-          >
+        >
           Inscrever-se
         </Buttons>
-      <Loading>{isLoadingUser && "...Carregando!!! ...."}</Loading>
+        <Loading>{isLoadingUser && "...Carregando!!! ...."}</Loading>
       </LisTripDiv>
     </LisTripDiv>
   );

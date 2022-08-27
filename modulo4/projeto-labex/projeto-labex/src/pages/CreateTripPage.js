@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "../hooks/UseForm";
-import { goToHomePage } from "../routes/Coordinator";
+import { goToBack, goToHomePage } from "../routes/Coordinator";
 import { Buttons, CentralizerDiv, Header, StyledH2 } from "./style";
 import axios from "axios";
 import useProtectedPage from "../hooks/UseProtectedPage";
@@ -31,7 +31,6 @@ function CreateTripPage() {
     },
   };
 
-
   const createTrip = (event) => {
     event.preventDefault();
 
@@ -42,7 +41,7 @@ function CreateTripPage() {
         headers
       )
       .then((response) => {
-        console.log(response.data);
+        console.log(response.data, alert("Viagem Criada!"));
       })
       .catch((error) => {
         console.log(error);
@@ -70,7 +69,7 @@ function CreateTripPage() {
             placeholder="Nome da viagem"
           ></input>
           <br />
-          <select 
+          <select
             placeholder={"Planeta"}
             onChange={onChange}
             value={form.planet}
@@ -113,7 +112,6 @@ function CreateTripPage() {
           <input
             name="date"
             value={form.date}
-            
             onChange={onChange}
             id="date"
             min="2022-08-18"
@@ -148,6 +146,13 @@ function CreateTripPage() {
           ></input>
           <br />
           <Buttons onClick={() => goToHomePage(navigate)}>Logout</Buttons>
+          <Buttons
+            onClick={() => {
+              goToBack(navigate);
+            }}
+          >
+            Voltar
+          </Buttons>
           <Buttons>Criar</Buttons>
         </form>
       </CentralizerDiv>

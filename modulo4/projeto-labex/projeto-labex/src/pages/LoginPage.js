@@ -29,7 +29,7 @@ function LoginPage() {
   return (
     <div>
       <Header>
-      <StyledH2>Login</StyledH2>
+        <StyledH2>Login</StyledH2>
       </Header>
       <CentralizerDiv>
         <form onSubmit={logIn}>
@@ -41,7 +41,7 @@ function LoginPage() {
             type="email"
             placeholder="Digite seu e-mail"
             pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
-            title="O e-mail deve ser o corporativo. Ex: labex@labex.com.br" 
+            title="O e-mail deve ser o corporativo. Ex: labex@labex.com.br"
             required
           />
           <br />
@@ -53,7 +53,7 @@ function LoginPage() {
             type="password"
             placeholder="Digite sua senha"
             pattern="^.{6,10}$"
-            title="A senha deve conter no mínimo 6 caracteres" 
+            title="A senha deve conter no mínimo 6 caracteres"
             required
           />
           <br />
