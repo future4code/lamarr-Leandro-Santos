@@ -8,25 +8,28 @@ let clients = [
 ];
 
 newClient = { id: 3, nome: "Leandro" };
-console.log(clients);
+
 //Validação clientes no array
 
-if (newClient.id === [clients.id]) {
-  console.log(`Erro. Parâmetro inválido, o  "id" já existe`);
-} else {
-  clients.push(newClient);
-}
-console.log(clients);
+clients.forEach(object =>{
+  if(object.id === newClient.id){
+    // console.log(clients);
+    console.log(`Erro. Parâmetro inválido, o  "id" já existe`)
+  } else{
+    clients.push(newClient)
+   
+  }
+});
 
 // Tabuada e validação
-tabledNumber = "5";
+// tabledNumber = "5";
 
-if (tabledNumber === String(tabledNumber))
-  console.log(`Erro. Parâmetro inválido (deve ser digitado um número).`);
-else if (tabledNumber > 10)
-  console.log("Erro. Parâmetro inválido (número precisa valer entre 1 e 10).");
-else {
-  for (let i = 0; i <= 10; i++) {
-    console.log(`${i} x ${tabledNumber} = ${i * tabledNumber}`);
-  }
-}
+// if (tabledNumber === String(tabledNumber))
+//   console.log(`Erro. Parâmetro inválido (deve ser digitado um número).`);
+// else if (tabledNumber > 10)
+//   console.log("Erro. Parâmetro inválido (número precisa valer entre 1 e 10).");
+// else {
+//   for (let i = 0; i <= 10; i++) {
+//     console.log(`${i} x ${tabledNumber} = ${i * tabledNumber}`);
+//   }
+// }
