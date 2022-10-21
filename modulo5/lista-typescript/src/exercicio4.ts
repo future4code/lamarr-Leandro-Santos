@@ -55,17 +55,12 @@ const colaboradores: Colaborador[] = [
   },
 ];
 
-function buscarPorSetor(
-  funcionarios: Colaborador[],
-  setor?: string,
-  presencial?: boolean
-): Colaborador[] {
-  if (setor === undefined || setor.length === 0 || presencial === true) {
-    return funcionarios;
-  }
-  return funcionarios.filter((setores: Colaborador) => {
-    return setores.setor === setor;
-  });
+function buscarPorSetor(funcionarios: Colaborador[]): Colaborador[] {
+  const filtros: Colaborador[] = funcionarios.filter((item: Colaborador) =>{
+      return item.presencial === true && item.setor === "Marketing"
+  })
+  return filtros
 }
 
-console.table(buscarPorSetor(colaboradores, "Marketing"));
+console.table(buscarPorSetor(colaboradores));
+
