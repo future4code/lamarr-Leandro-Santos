@@ -14,19 +14,17 @@ const lista = () => {
     { name: "Jéssica", email: "jessica@email.com", role: "user" },
     { name: "Adilson", email: "adilson@email.com", role: "user" },
     { name: "Carina", email: "carina@email.com", role: "admin" },
-
   ];
-  
+
   let admin: Users[] = usuarios.filter((item: Users) => {
-    return item.role === "admin"
-  })
+    return item.role === "admin";
+  });
 
   let emails: string[] = admin.map((item) => {
-    return item.email
-})
+    return item.email;
+  });
 
-return admin
-}
-
+  return emails;
+};
 
 console.table(lista());

@@ -16,7 +16,7 @@ type Filme = {
 };
 
 const filmes = () => {
-  const filme: Filme  = {
+  const filme: Filme = {
     nome: "Creed",
     anoLancamento: 2018,
     genero: GENERO.ACAO,
