@@ -1,6 +1,7 @@
 import express, { Request, Response } from "express";
 
 import cors from "cors";
+import { title } from "process";
 
 const app = express();
 
@@ -11,7 +12,7 @@ app.use(cors());
 //Exercício 01
 
 app.get("/ping", (req: Request, res: Response) => {
-  res.send("Pong! 🏓");
+  res.status(200).send("Pong! 🏓");
 });
 
 //Exercício 02
@@ -57,9 +58,19 @@ const toDoList: ToDo[] = [
   },
 ];
 
-//Exercício 04
+// Array com todos os afazeres
 
 app.get("/todos", (req: Request, res: Response) => {
+  const lists = toDoList.map((list) => {
+    return list;
+  });
+
+  res.status(200).send(lists);
+});
+
+//Exercício 04
+
+app.get("/todos/status", (req: Request, res: Response) => {
   const lists = toDoList.map((list) => {
     return list;
   });
@@ -70,11 +81,40 @@ app.get("/todos", (req: Request, res: Response) => {
     }
   });
 
-  res.send(newList);
+  res.status(200).send(newList);
 });
 
+// Exercício 05
 
+app.post("/create/todo", (req: Request, res: Response) => {
+  const todoName = req.body.title;
+  const addId = req.body.id;
+  const addCompleted = Boolean(req.body.completed);
+  const addUserid = req.headers.authorization;
 
+  if (!todoName || !addUserid || !addId || (addCompleted && !addCompleted)) {
+    res
+      .status(400)
+      .send(
+        "⚠️ Deverá informar os campos: id, userId, title e completed, para adicionar um novo afazer.⚠️"
+      );
+  } else {
+    toDoList.push({
+      id: Number(addId),
+      userId: Number(addUserid),
+      title: todoName,
+      completed: addCompleted,
+    });
+  }
+
+  res.status(200).send(toDoList);
+});
+
+// Exercício 06
+
+app.put("edit/", (req: Request, res: Response) => {
+  res.status(200).send();
+});
 
 app.listen(3003, () => {
   console.log("Server is running in http://localhost:3003");
