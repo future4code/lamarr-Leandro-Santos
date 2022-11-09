@@ -1,0 +1,287 @@
+### Exercício 1
+a) CREATE TABLE => Criar a tabela
+   VARCHAR(N)=> String com no máximo N caracteres
+   PRIMARY KEY => Chave primária (chave única na tabela)
+   NULL / NOT NULL => Indica se a coluna pode ser ou não pode ser nula
+   DATE => Representa data (YYYY-MM-DD)
+   FLOAT => Uma forma de representar um número não inteiro em uma tabela. 
+
+b) O comando SHOW DATABASES informa o nome do schema
+O comando SHOW TABLES informa o nome da tabela que está dentro do schema
+
+c) O comando DESCRIBE mostra a tabela estruturada com seus respectvos dados.
+
+
+### Exercício 2
+a) INSERT INTO Actor (id, name, salary, birth_date, gender)
+VALUES(
+  "002", 
+  "Glória Pires",
+  1200000,
+  "1963-08-23", 
+  "famale"
+);
+
+b) Error Code: 1062. Duplicate entry '002' for key 'PRIMARY'
+O erro foi gerado pois já havia um ID sendo "002", onde o comando PRIMARY KEY, não deixa criar, sendo chave única
+
+c) INSERT INTO Actor (id, name, salary)
+VALUES(
+  "003", 
+  "Fernanda Montenegro",
+  300000,
+  "1929-10-19", 
+  "female"
+);
+O erro foi gerado pois não foi especificado todas as colunas dos VALUES inseridos. 
+Foi realizado o ajuste e inserido os Dados
+
+d) Error Code: 1364. Field 'name' doesn't have a default value
+
+
+O erro foi gerado pois não foi colocado o campo name, pois na criação, declaramos que o valor name não pode ser nulo. 
+Foi realizado o ajuste e inserido os Dados
+
+e) Error Code: 1292. Incorrect date value: '1950' for column 'birth_date' at row 1
+
+O erro foi gerado pois não foi colocado as aspas na data, pois está lendo como número 
+Foi realizado o ajuste e inserido os Dados
+
+f) Conforme solicitado, foi criado dois novos atores.
+
+### Exercício 3
+a) SELECT * from Actor WHERE gender = "female"
+
+b)SELECT name, salary from Actor WHERE name = "Tony Ramos"
+c) SELECT * from Actor WHERE gender =  "invalid"
+A coluna retornou vazia pois todos os dados de gender estavam preenchidos
+
+d) SELECT id, name, salary from Actor WHERE salary <=500000
+Retornou corretamente
+
+e) SELECT id, name from Actor WHERE id = "002"
+Error Code: 1054. Unknown column 'nome' in 'field list' 
+Não existe coluna sendo nome, o correto é name
+
+### Exercício 4
+a) A query busca todos os dados da tabela Actor e busca/filtra pel comando WHERE os nomes começam com "A" ou "J" e cujos salários são maiores do que R$300.000, com ajuda dos operadores LIKE, OR e AND.
+
+b)
+SELECT * FROM Actor
+WHERE (name NOT LIKE "A%") AND salary > 350000;
+
+c) 
+SELECT * FROM Actor
+WHERE name LIKE "%g%" OR name LIKE "%G%";
+
+d)
+SELECT * FROM Actor
+WHERE (name LIKE "%g%" OR name LIKE "%G%" OR name LIKE "%A%" OR name LIKE "%a%") AND salary BETWEEN 350000 AND 900000;
+
+### Exercício 5
+a)
+CREATE TABLE Movies (
+  id VARCHAR(255) PRIMARY KEY,
+  title VARCHAR (255) NOT NULL,
+  sinopse TEXT NOT NULL,
+  release_date DATE NOT NULL,
+  evaluation INT NOT NULL
+);
+
+b)
+INSERT INTO Movies (id, title, sinopse, release_date, evaluation)
+VALUES(
+  "001", 
+  "Se Eu Fosse Você",
+  "Cláudio e Helena são casados há muitos anos e enfrentam a rotina do casamento. Um dia eles são atingidos por um fenômeno inexplicável e trocam de corpos",
+  "2006-01-06", 
+ 7
+);
+
+c) 
+INSERT INTO Movies (id, title, sinopse, release_date, evaluation)
+VALUES(
+  "002", 
+  "Doce de mãe",
+  "Dona Picucha, uma animada senhora de 85 anos, sempre causa grandes confusões. A vida dela e dos seus quatro filhos sofre uma reviravolta depois que Zaida, empregada e amiga de Dona Picucha, anuncia que vai se casar e não poderá mais morar com ela",
+  "2012-12-27", 
+ 10
+);
+
+d)
+INSERT INTO Movies (id, title, sinopse, release_date, evaluation)
+VALUES(
+  "003", 
+  "Dona Flor e Seus Dois Maridos",
+  "Dona Flor é uma sedutora professora de culinária casada com Vadinho, que só quer saber de farras e jogatina nas boates. A vida de abusos acaba por acarretar sua morte precoce.",
+  "2017-11-02", 
+ 8
+);
+
+e)
+INSERT INTO Movies (id, title, sinopse, release_date, evaluation)
+VALUES(
+  "004", 
+  "Minha mãe é uma peça",
+  "O Filme, acompanha as hilárias peripécias de Dona Hermínia (Paulo Gustavo), uma mulher de meia idade, aposentada, que após ser trocada pelo marido por uma mulher mais nova e não ter mais que cuidar dos filhos já crescidos, tem como preocupação maior procurar o que fazer. ",
+  "2013-06-21", 
+ 10
+);
+
+### Exercício 6
+a) SELECT id, title, evaluation from Movies WHERE id = "001";
+
+b)SELECT * from Movies WHERE title = "Doce de mãe";
+
+c) SELECT id, title, sinopse from Movies WHERE evaluation >= 7;
+
+### Exercício 7
+a) SELECT * FROM Movies
+WHERE title LIKE "%Dona%"
+OBS.: vida não tem, por isso testei com outro nomes
+
+b) 
+SELECT * FROM Movies
+WHERE title LIKE "%Dona%" OR sinopse LIKE "%Dona%"
+
+c)
+SELECT * FROM Movies
+WHERE release_date < "2022-11-08" 
+
+d) 
+SELECT * FROM Movies
+WHERE (release_date < "2022-11-08") AND (title LIKE "%Dona%" OR sinopse LIKE "%Dona%") AND evaluation >7
+
+
+### CÓDIGOS
+
+/*CREATE TABLE Actor (
+    id VARCHAR(255) PRIMARY KEY,
+    name VARCHAR (255) NOT NULL,
+    salary FLOAT NOT NULL,
+    birth_date DATE NOT NULL,
+    gender VARCHAR(6) NOT NULL
+);
+
+SHOW DATABASES;
+SHOW TABLES;
+DESCRIBE Actor;
+
+INSERT INTO Actor (id, name, salary, birth_date, gender)
+VALUES(
+  "002", 
+  "Claudia Raia",
+  1400000,
+  "1976-12-23", 
+  "famale"
+);
+INSERT INTO Actor (id, name, salary, birth_date, gender)
+VALUES(
+  "003", 
+  "Fernanda Montenegro",
+  300000,
+  "1929-10-19", 
+  "female"
+);
+
+INSERT INTO Actor (id, name, salary, birth_date, gender)
+VALUES(
+  "004",
+  "Victor Motta",
+  400000,
+  "1995-08-07", 
+  "male"
+);
+INSERT INTO Actor (id, name, salary, birth_date, gender)
+VALUES(
+  "005", 
+  "Juliana Paes",
+  719333.33,
+  "1979-03-26", 
+  "female"
+);
+
+INSERT INTO Actor (id, name, salary, birth_date, gender)
+VALUES(
+  "006", 
+  "Andrea Soares",
+  719333.33,
+  "1979-03-26", 
+  "female"
+);
+
+INSERT INTO Actor (id, name, salary, birth_date, gender)
+VALUES(
+  "007", 
+  "Israel Cordeiro",
+  569333.33,
+  "1986-06-20", 
+  "male"
+);
+SELECT * FROM Actor;
+
+SELECT id, salary from Actor;
+
+SELECT id, name from Actor WHERE gender = "male";
+
+SELECT * from Actor WHERE gender = "female";
+
+SELECT name, salary from Actor WHERE name = "Tony Ramos";
+
+SELECT * from Actor WHERE gender =  "invalid";
+
+SELECT id, name, salary from Actor WHERE salary <=500000;
+
+SELECT id, name from Actor WHERE id = "002";
+
+SELECT * FROM Actor
+WHERE (name LIKE "A%" OR name LIKE "J%") AND salary > 300000;
+
+SELECT * FROM Actor
+WHERE (name NOT LIKE "A%") AND salary > 350000;
+
+SELECT * FROM Actor
+WHERE name LIKE "%g%" OR name LIKE "%G%";
+
+SELECT * FROM Actor
+WHERE (name LIKE "%g%" OR name LIKE "%G%" OR name LIKE "%A%" OR name LIKE "%a%") AND salary BETWEEN 350000 AND 900000;
+
+CREATE TABLE Movies (
+    id VARCHAR(255) PRIMARY KEY,
+    title VARCHAR (255) NOT NULL,
+    sinopse TEXT NOT NULL,
+    release_date DATE NOT NULL,
+    evaluation INT NOT NULL
+);
+
+INSERT INTO Movies (id, title, sinopse, release_date, evaluation)
+VALUES(
+  "004", 
+  "Minha mãe é uma peça",
+  "O Filme, acompanha as hilárias peripécias de Dona Hermínia (Paulo Gustavo), uma mulher de meia idade, aposentada, que após ser trocada pelo marido por uma mulher mais nova e não ter mais que cuidar dos filhos já crescidos, tem como preocupação maior procurar o que fazer. ",
+  "2013-06-21", 
+ 10
+);
+SELECT * FROM Movies
+
+
+SELECT id, title, evaluation from Movies WHERE id = "001";
+
+SELECT * from Movies WHERE title = "Doce de mãe";
+
+SELECT id, title, sinopse from Movies WHERE evaluation >= 7;
+
+SELECT * FROM Movies
+WHERE title LIKE "%Dona%";
+
+SELECT * FROM Movies
+WHERE title LIKE "%Dona%" OR sinopse LIKE "%Dona%";
+
+SELECT * FROM Movies
+WHERE release_date < "2022-11-08" ;
+
+SELECT * FROM Movies
+WHERE (release_date < "2022-11-08") AND (title LIKE "%Dona%" OR sinopse LIKE "%Dona%") AND evaluation >7
+*/
+
+
