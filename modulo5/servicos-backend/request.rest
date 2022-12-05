@@ -1,0 +1,27 @@
+GET https://viacep.com.br/ws/58434352/json/
+Content-Type: application/json
+
+###
+
+// Exercício 01
+
+POST http://localhost:3003/address
+Content-Type: application/json
+
+{
+    "cep":"58434352"
+}
+
+//Exercicio 02 -> migrations.ts
+###
+
+// Exercício 03
+
+POST http://localhost:3003/full-address
+Content-Type: application/json
+
+{
+    "cep":"58434352",
+    "complemento": "casa",
+    "numero": "13"
+}
