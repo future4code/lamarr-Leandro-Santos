@@ -1,0 +1,33 @@
+
+### ENDPOINTS DOS USERS
+POST http://localhost:3003/user/create
+Content-Type: application/json
+
+{
+    "name": "Andréa",
+    "email": "dea@email.com",
+    "password": "7654321"
+}
+
+###
+
+GET http://localhost:3003/user/all
+Content-Type: application/json
+
+
+### ENDPOINTS DOS MOVIES
+
+POST http://localhost:3003/movie/create
+Content-Type: application/json
+
+{
+    "description": "Em À Procura da Felicidade, Chris Gardner (Will Smith) é um pai de família que enfrenta sérios problemas financeiros. Apesar de todas as tentativas em manter a família unida, Linda (Thandie Newton), sua esposa, decide partir. Chris agora é pai solteiro e precisa cuidar de Christopher (Jaden Smith), seu filho de apenas 5 anos. Ele tenta usar sua habilidade como vendedor para conseguir um emprego melhor, que lhe dê um salário mais digno.",
+    "duration_in_minutes": 178,
+    "title": "À PROCURA DA FELICIDADE",
+    "year_of_release": "2007"
+}
+
+###
+
+GET http://localhost:3003/movie/all
+Content-Type: application/json
