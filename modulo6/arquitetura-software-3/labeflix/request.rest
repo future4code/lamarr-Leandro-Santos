@@ -1,0 +1,34 @@
+### ENDPOINTS DOS USERS
+
+POST http://localhost:3003/user/create
+Content-Type: application/json
+
+{
+    "name": "Belinha",
+    "email": "belinha@email.com",
+    "password": "belinha10"
+}
+
+
+###
+
+GET http://localhost:3003/user/all
+Content-Type: application/json
+
+
+### ENDPOINTS DOS MOVIES
+
+POST http://localhost:3003/movie/create
+Content-Type: application/json
+
+{
+    "description": "Esse é um teste",
+    "duration_in_minutes": 2000,
+    "title": "O TESTE",
+    "year_of_release": "2023"
+}
+
+###
+
+GET http://localhost:3003/movie/all
+Content-Type: application/json
